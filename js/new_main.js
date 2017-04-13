@@ -354,18 +354,14 @@
                     this.ctxHistory.fillStyle = "#fff";
                     this.ctxHistory.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
                     this.ctxHistory.globalCompositeOperation = "source-over";
-                    var img = new Image();
-                    console.log($("#myCanvas").css("background"));
-                    // img.src = $("#myCanvas").css("background").split("(")[2].split(")")[0]; //待改善
-                    // img.src = "./images/robot.jpg";
-                    img.src = "./images/keji.jpg";
-                    var imgWidth = img.width;
-                    var imgHeight = img.height;
-                    // var imgLeft = -(canvasHistory.style.width - imgWidth) / 2;
-                    // console.log("imgLeft", imgLeft);
-                    img.onload = function() {
-                        canvasInfo.ctxHistory.drawImage(img, 0, 0, imgWidth, imgHeight);
-                    }
+                    // var img = new Image();
+                    // console.log($("#myCanvas").css("background"));
+                    // img.src = "./images/keji.jpg";
+                    // var imgWidth = img.width;
+                    // var imgHeight = img.height;
+                    // img.onload = function() {
+                    //     canvasInfo.ctxHistory.drawImage(img, 0, 0, imgWidth, imgHeight);
+                    // }
                     var canvasPic = new Image();
                     canvasPic.src = this.cPushArray[this.cStep];
                     canvasPic.onload = function() {
