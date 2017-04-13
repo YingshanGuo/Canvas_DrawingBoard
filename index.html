@@ -3,12 +3,12 @@
 <title>DrawingBoard</title>
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 <!--<link rel="stylesheet" type="text/css" href="./css/base.css">-->
-<link rel='stylesheet' href='./css/spectrum.css' />
+<!--<link rel='stylesheet' href='./css/spectrum.css' />-->
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="./css/drawingboard.css">
 <script src="./js/jquery-3.1.1.min.js"></script>
 <script src="./js/jquery-ui.min.js"></script>
-<script src='./js/spectrum.js'></script>
+<!--<script src='./js/spectrum.js'></script>-->
 <style type="text/css">
 
 </style>
@@ -27,7 +27,7 @@
     <div class="paint-bar">
         <div class="paint-tool">
             <div class="paint-menu" style="display: inline-flex;">
-                <div class="menu-arrow" data-name="paint-arrow"><i></i></div>
+                <div class="menu-arrow" data-name="paint-arrow" style="display: none;"><i></i></div>
                 <div class="menu-brush" data-name="paint-brush"><i></i></div>
                 <div class="menu-size menu-box" data-name="paint-size"><i class="fa fa-tachometer fa-3x" aria-hidden="true"></i></div>
                 <div class="menu-eraser" data-name="paint-eraser"><i></i></div>
@@ -47,7 +47,6 @@
                         <div class="basicLine">自由画笔</div>
                         <div class="fullLine">直线</div>
                         <div class="dashLine">虚线</div>
-                        <div>波浪线</div>
                     </div>
                     <div class="paint-color">
                         <div style="background-color:#ccc;"></div>
@@ -80,9 +79,9 @@
     <script src="./js/new_main.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function() {
-            $("#myCanvas").css({
-                "background": "url(./images/keji.jpg) 0 0  no-repeat"
-            });
+            // $("#myCanvas").css({
+            //     "background": "url(./images/keji.jpg) 0 0  no-repeat"
+            // });
             var canvas = new Drawingboard({
                 height: "600",
                 width: "800"
