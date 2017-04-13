@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DrawingBoard</title>
+<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="./css/base.css">-->
+<link rel='stylesheet' href='./css/spectrum.css' />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="./css/drawingboard.css">
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+<script src='./js/spectrum.js'></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body class="drawingboardBg">
+    <!--画板-->
+    <!--<div style="margin-top: 50px"></div>-->
+    <div style="position:relative;">
+        <canvas id="myCanvas" style="background-color:#fff;display:block;">你的浏览器居然不支持Canvas？！赶快换一个吧！！</canvas>
+        <canvas id="dashCanvas" style="z-index:2;top:0;position:absolute;display:none;"></canvas>
+        <canvas id="history" style="z-index:2;border:1px solid purple;position:absolute;display:none;"></canvas>
+        <div class="eraser-circle" style=""></div>
+
+    </div>
+    <div class="paint-bar">
+        <div class="paint-tool">
+            <div class="paint-menu" style="display: inline-flex;">
+                <div class="menu-arrow" data-name="paint-arrow"><i></i></div>
+                <div class="menu-brush" data-name="paint-brush"><i></i></div>
+                <div class="menu-size menu-box" data-name="paint-size"><i class="fa fa-tachometer fa-3x" aria-hidden="true"></i></div>
+                <div class="menu-eraser" data-name="paint-eraser"><i></i></div>
+                <div class="menu-clear" data-name="paint-clear"><i></i></div>
+                <div class="menu-undo" data-name="paint-undo"><i></i></div>
+                <div class="menu-redo" data-name="paint-redo"><i></i></div>
+                <div class="menu-download menu-box" data-name="paint-download">
+                    <a id="download" download="triangle.png">
+                        <i class="fa fa-download fa-3x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="paint-bar-items" style="position:relative;">
+                <span class="paint-arrow"></span>
+                <div class="paint-brush paint-brush-test" style="display:none;">
+                    <div class="paint-lineStyle">
+                        <div class="basicLine">自由画笔</div>
+                        <div class="fullLine">直线</div>
+                        <div class="dashLine">虚线</div>
+                        <div>波浪线</div>
+                    </div>
+                    <div class="paint-color">
+                        <div style="background-color:#ccc;"></div>
+                        <div style="background-color:#336699;"></div>
+                        <div style="background-color:#cc6699;"></div>
+                        <div style="background-color:#99ccff;"></div>
+                        <div style="background-color:#993399;"></div>
+                        <div style="background-color:#cc0033;"></div>
+                    </div>
+                    <div class="triangle-css3 transform ie-transform-filter"></div>
+                </div>
+                <div class="paint-size" style="display:none;">
+                    <div id="slider"></div>
+                    <input class="paint-size-input" type="text" name="" value="1">&nbsp; px
+                    <div class="triangle-css3 transform ie-transform-filter"></div>
+                </div>
+                <div class="paint-eraser" style="display:none;">
+                    <div class="paint-eraser-circle eraser-small" data-size="8"></div>
+                    <div class="paint-eraser-circle eraser-medium" data-size="15"></div>
+                    <div class="paint-eraser-circle eraser-large" data-size="20"></div>
+                    <div class="triangle-css3 transform ie-transform-filter"></div>
+                </div>
+                <span class="paint-clear"></span>
+                <span class="paint-undo"></span>
+                <span class="paint-redo"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/new_main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#myCanvas").css({
+                "background": "url(./images/keji.jpg) 0 0  no-repeat"
+            });
+            var canvas = new Drawingboard({
+                height: "600",
+                width: "800"
+            });
+            canvas.paintSlider();
+            canvas.init();
+            canvas.paintTool();
+            // console.log("canvas高度", $("#myCanvas"), $("#myCanvas").attr("height"), $("#myCanvas").attr("width"));
+
+            // var canvas = document.getElementById('myCanvas');
+            // canvas.width = 400;
+            // canvas.height = 500;
+            // console.log("canvas 宽高", canvas.width, canvas.height);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+#myCanvas {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 10px 10px 5px 0 #888;
+    -moz-box-shadow: 10px 10px 5px 0, #888;
+    box-shadow: 10px 10px 5px 0 #888;
+}
+
+.drawingboardBg {
+    height: 100%;
+    background: url(../images/bg-lesson-begin.jpg) no-repeat;
+    display: block;
+}
+
+.click {
+    background: #fff767;
+}
+
+
+/*paint-tool*/
+
+.paint-tool {
+    display: inline-flex;
+    background: #fff;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    position: relative;
+    z-index: 10;
+}
+
+.paint-tool i {
+    color: rgba(243, 99, 28, 1);
+}
+
+.menu-arrow,
+.menu-brush,
+.menu-size,
+.menu-eraser,
+.menu-clear,
+.menu-undo,
+.menu-redo,
+.menu-download {
+    margin: 10px;
+}
+
+
+/*.paint-tool div {
+    margin: 10px;
+}*/
+
+.menu-box {
+    width: 48px;
+    height: 42px;
+    margin: 10px;
+    display: block;
+}
+
+.menu-arrow i {
+    width: 42px;
+    height: 42px;
+    background: url(../images/arrow.png) no-repeat;
+    display: block;
+}
+
+.menu-brush i {
+    width: 42px;
+    height: 42px;
+    background: url(../images/pencil.png) no-repeat;
+    display: block;
+}
+
+.menu-eraser i {
+    width: 42px;
+    height: 42px;
+    background: url(../images/eraser.png) no-repeat;
+    display: block;
+}
+
+.menu-clear i {
+    width: 42px;
+    height: 42px;
+    background: url(../images/clear.png) no-repeat;
+    display: block;
+}
+
+.menu-undo i {
+    width: 48px;
+    height: 42px;
+    background: url(../images/undo.png) no-repeat;
+    display: block;
+}
+
+.menu-redo i {
+    width: 48px;
+    height: 42px;
+    background: url(../images/redo.png) no-repeat;
+    display: block;
+}
+
+
+/*paint-bar-items*/
+
+.paint-bar-trangle {
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
+    transform: rotate(-45deg);
+    position: relative;
+    margin-bottom: -14px;
+    bottom: 1px;
+    left: 16px;
+    background: white;
+}
+
+
+/*trangle*/
+
+.triangle-css3 {
+    position: absolute;
+    bottom: -9px;
+    left: 25px;
+    overflow: hidden;
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
+}
+
+.transform {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*ie7-9*/
+
+.ie-transform-filter {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(
+ M11=0.7071067811865475, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865475, SizingMethod='auto expand')";
+ filter: progid: DXImageTransform.Microsoft.Matrix( M11=0.7071067811865475, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865475, SizingMethod='auto expand');
+}
+
+.paint-bar-items>div {
+    position: fixed;
+    background: #fff;
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+/*paint-brush*/
+
+.paint-brush-test {
+    height: 110px;
+}
+
+.paint-brush-test .paint-lineStyle {
+    width: 100px;
+    display: block;
+    color: #000;
+    cursor: pointer;
+}
+
+.paint-color>div {
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*.paint-size*/
+
+.paint-size {
+    width: 200px;
+    height: 29px;
+    display: flex;
+    padding: 10px;
+    color: #000;
+    z-index: 10;
+}
+
+.paint-size-input {
+    width: 40px;
+    height: 20px;
+}
+
+
+/*eraser*/
+
+.eraser-circle {
+    width: 10px;
+    height: 10px;
+    border: 1px solid blue;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.paint-eraser {
+    width: 80px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+}
+
+.paint-eraser .paint-eraser-circle {
+    border-radius: 10px;
+    background-color: orange;
+    margin: 5px;
+    display: flex;
+}
+
+.eraser-small {
+    width: 8px;
+    height: 8px;
+}
+
+.eraser-medium {
+    width: 15px;
+    height: 15px;
+}
+
+.eraser-large {
+    width: 20px;
+    height: 20px;
+}
+
+
+/*dashCanvas*/
+
+#dashCanvas {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    margin: 0 auto;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+}
+
+body {
+    margin: 0;
+    border: 0;
+}
+
+#slider {
+    width: 100px;
+    margin: 10px;
+    display: inline-flex;
+    z-index: 10;
+}
+
+.ui-slider-horizontal {
+    height: 0.2em;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 0.5em;
+    margin-left: -.25em;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.5em;
+}
+
+.ui-slider .ui-widget-header {
+    color: #222222;
+    font-weight: bold;
+}
